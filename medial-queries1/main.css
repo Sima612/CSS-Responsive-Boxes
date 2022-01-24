@@ -1,3 +1,41 @@
+* {
+  border: 1px solid lightgray;
+}
 body {
-  background: blanchedalmond;
+  background: lightgray;
+  margin: auto;
+  text-align: center;
+  font-size: 50px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+.b {
+  min-height: 60vh;
+  flex-grow: 10;
+  background-color: gray;
+}
+.a, .c {
+  flex-grow: 1;
+  background-color: gray;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .a {
+    width: 100%
+  }
+  .b {
+    max-width: 75%;
+  }
+  .c {
+    max-width: 25%;
+  }
 }
